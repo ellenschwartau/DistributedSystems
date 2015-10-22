@@ -1,5 +1,11 @@
 package de.fhwedel.ueb01.counter;
 
+/**
+ * Synchronisierter Counter.
+ * 
+ * @author Ellen
+ *
+ */
 public class SynchronizedCounter extends Counter {
 
     private int c = 0;
@@ -10,8 +16,7 @@ public class SynchronizedCounter extends Counter {
         b = b + 1;
         this.c = b;
         // this.checkForInterference(this.c, expected);
-
-        assert (this.c != expected) : "Interferenz aufgetreten!";
+        assert (this.c == expected) : "Interferenz aufgetreten!";
     }
 
     public synchronized void decrement() {
@@ -20,7 +25,7 @@ public class SynchronizedCounter extends Counter {
         d = d - 1;
         this.c = d;
         // this.checkForInterference(this.c, expected);
-        assert (this.c != expected) : "Interferenz aufgetreten!";
+        assert (this.c == expected) : "Interferenz aufgetreten!";
     }
 
     public synchronized int value() {
