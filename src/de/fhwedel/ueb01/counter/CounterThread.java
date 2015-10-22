@@ -23,11 +23,9 @@ public class CounterThread implements Runnable {
     @Override
     public void run() {
         while (true) {
-            if (Math.random() > 0.5) {
-                System.out.println(Thread.currentThread().getName() + " inkrementiert!");
+            if (Math.random() > 0.2) {
                 counter.increment();
             } else {
-                System.out.println(Thread.currentThread().getName() + " dekrementiert!");
                 counter.decrement();
             }
         }

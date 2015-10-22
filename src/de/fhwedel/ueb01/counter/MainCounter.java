@@ -10,7 +10,7 @@ package de.fhwedel.ueb01.counter;
 public class MainCounter {
 
     /** Anzahl der Threads */
-    private static final int THREAD_COUNT = 3;
+    private static final int THREAD_COUNT = 10;
 
     /**
      * @param args
@@ -33,7 +33,7 @@ public class MainCounter {
 
     public static void startThreads(Counter counter) {
         for (int i = 0; i < THREAD_COUNT; i++) {
-            System.out.println("Starte Thread: " + i);
+            // System.out.println("Starte Thread: " + i);
             new Thread(new CounterThread(counter)).start();
         }
     }

@@ -15,7 +15,6 @@ public class SynchronizedCounter extends Counter {
         int b = this.c;
         b = b + 1;
         this.c = b;
-        // this.checkForInterference(this.c, expected);
         assert (this.c == expected) : "Interferenz aufgetreten!";
     }
 
@@ -24,7 +23,6 @@ public class SynchronizedCounter extends Counter {
         int d = this.c;
         d = d - 1;
         this.c = d;
-        // this.checkForInterference(this.c, expected);
         assert (this.c == expected) : "Interferenz aufgetreten!";
     }
 
