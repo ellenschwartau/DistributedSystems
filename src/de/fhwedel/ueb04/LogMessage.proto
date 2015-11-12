@@ -1,0 +1,26 @@
+package messages;
+
+option java_package = "de.fhwedel.ueb04";
+option java_outer_classname = "LogMessageProtos";
+
+
+message LogMessage {
+	required string timestamp = 1;
+	optional ID id = 2;
+	required Priority priority = 3;
+	required string content = 4;
+	
+	message ID {
+		required string autor = 1;
+		required string location = 2;
+	}
+	
+	enum Priority {
+		DEBUG = 0;
+		INFO = 1;
+		WARN = 2;
+		ERROR = 3;
+		FATAL = 4;
+	}
+	
+}
