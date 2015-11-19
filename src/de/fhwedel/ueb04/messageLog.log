@@ -1,0 +1,14 @@
+timestamp: "Thu Nov 19 11:47:19 CET 2015"
+id {
+  autor: "Malte"
+  location: "Hamburg"
+}
+priority: INFO
+content: "Test Message"
+timestamp: "Thu Nov 19 11:48:46 CET 2015"
+id {
+  autor: "Malte"
+  location: "Hamburg"
+}
+priority: INFO
+content: "Test Message"
